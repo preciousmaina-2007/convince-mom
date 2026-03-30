@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Kenyatta Road is Better - Mom, Please Let Me Go!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-btn {
+            display: block;
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .page {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .benefit-card {
+            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .distance-comparison {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .location {
+            background: #4facfe;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 200px;
+            margin: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .back-btn {
+            background: #6c5ce7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 1em;
+        }
+
+        .back-btn:hover {
+            background: #5a4fcf;
+        }
+
+        .emoji {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Mom, Let Me Stay at Kenyatta Road! 🚀</h1>
+        
+        <!-- Page 1: Welcome -->
+        <div id="page1" class="page active">
+            <div class="benefit-card">
+                <span class="emoji">👋</span>
+                <h2>Hi Mom! Let me show you why Kenyatta Road is PERFECT!</h2>
+                <p>Click through to see all the amazing reasons! 😊</p>
+            </div>
+            <button class="nav-btn" onclick="nextPage(2)">Start Journey →</button>
+        </div>
+
+        <!-- Page 2: Distance Comparison -->
+        <div id="page2" class="page">
+            <div class="benefit-card">
+                <span class="emoji">📏</span>
+                <h2>Malaa vs Kenyatta Road DISTANCE</h2>
+            </div>
+            <div class="distance-comparison">
+                <div class="location">
+                    <h3>🏠 Malaa (Home)</h3>
+                    <p><strong>15-20 KM</strong> to school</p>
+                    <p>⏰ 45-60 mins travel</p>
+                    <p>😴 Very tiring!</p>
+                </div>
+                <div class="location" style="background: #00b894;">
+                    <h3>🏙️ Kenyatta Road</h3>
+                    <p><strong>2-3 KM</strong> to school</p>
+                    <p>⏰ 10-15 mins travel</p>
+                    <p>😎 Super easy!</p>
+                </div>
+            </div>
+            <button class="nav-btn" onclick="nextPage(3)">Next: Fare Savings →</button>
+            <button class="back-btn" onclick="prevPage(1)">← Back</button>
+        </div>
+
+        <!-- Page 3: Fare Comparison -->
+        <div id="page3" class="page">
+            <div class="benefit-card">
+                <span class="emoji">💰</span>
+                <h2>Save MONEY on Fare!</h2>
+            </div>
+            <div style="text-align: center; font-size: 1.3em; margin: 30px 0;">
+                <div style="background: #e17055; color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                    <h3>Malaa Daily Fare: KSh 200-300</h3>
+                    <p>Monthly: <strong>KSh 6,000-9,000</strong> 😱</p>
+                </div>
+                <div style="background: #00b894; color: white; padding: 20px; border-radius: 15px; margin: 20px 0;">
+                    <h3>Kenyatta Road Fare: KSh 50-80</h3>
+                    <p>Monthly: <strong>KSh 1,500-2,400</strong> 😍</p>
+                </div>
+                <h3 style="color: #00b894; font-size: 2em;">SAVE KSh 4,500+ per month! 💸</h3>
+            </div>
+            <button class="nav-btn" onclick="nextPage(4)">Next: No Tiredness →</button>
+            <button class="back-btn" onclick="prevPage(2)">← Back</button>
+        </div>
+
+        <!-- Page 4: No Tiredness -->
+        <div id="page4" class="page">
+            <div class="benefit-card">
+                <span class="emoji">😴➡️😊</span>
+                <h2>No More Tiredness!</h2>
+            </div>
+            <ul style="font-size: 1.2em; line-height: 2; margin: 30px 0;">
+                <li>✅ Short distance = More energy for studies</li>
+                <li>✅ Less travel time = More sleep</li>
+                <li>✅ No long matatu rides = Less stress</li>
+                <li>✅ Arrive fresh for classes! 🌟</li>
+            </ul>
+            <div style="background: #fdcb6e; padding: 20px; border-radius: 15px; text-align: center;">
+                <h3>You'll be HAPPY & FOCUSED at school! 📚✨</h3>
+            </div>
+            <button class="nav-btn" onclick="nextPage(5)">Next: Family Fun →</button>
+            <button class="back-btn" onclick="prevPage(3)">← Back</button>
+        </div>
+
+        <!-- Page 5: Cousins -->
+        <div id="page5" class="page">
+            <div class="benefit-card">
+                <span class="emoji">👨‍👩‍👧‍👦</span>
+                <h2>My Cousins are THERE!</h2>
+            </div>
+            <div style="text-align: center; margin: 30px 0;">
+                <div style="display: inline-block; background: #6c5ce7; color: white; padding: 20px; border-radius: 15px; margin: 10px;">
+                    <h3>Ann 😍</h3>
+                    <p>We study together!</p>
+                </div>
+                <div style="display: inline-block; background: #a29bfe; color: white; padding: 20px; border-radius: 15px; margin: 10px;">
+                    <h3>Kadada 🎉</h3>
+                    <p>Never bored with her!</p>
+                </div>
+            </div>
+            <p style="font-size: 1.3em; text-align: center;">
+                No boredom + family support = SUCCESS! 🏆
+            </p>
+            <button class="nav-btn" onclick="nextPage(6)">Final Reason →</button>
+            <button class="back-btn" onclick="prevPage(4)">← Back</button>
+        </div>
+
+        <!-- Page 6: Conclusion -->
+        <div id="page6" class="page">
+            <div style="background: linear-gradient(45deg, #00b894, #00cec9); color: white; padding: 40px; border-radius: 20px; text-align: center;">
+                <span class="emoji" style="font-size: 4em;">🙏✨</span>
+                <h1>Mom, PLEASE let me stay at Kenyatta Road!</h1>
+                <h2>All reasons prove it's BEST for me! ❤️</h2>
+                <ul style="font-size: 1.3em; margin: 30px 0; list-style: none;">
+                    <li>✅ Much shorter distance</li>
+                    <li>✅ Save thousands on fare</li>
+                    <li>✅ No tiredness</li>
+                    <li>✅ Cousins Ann & Kadada</li>
+                    <li>✅ Better studies! 📚</li>
+                </ul>
+                <h2 style="color: #ffeaa7; font-size: 2.5em;">I LOVE YOU MOM! 😘</h2>
+            </div>
+            <button class="nav-btn" onclick="restart()">Review Again</button>
+            <button class="back-btn" onclick="prevPage(5)">← Back</button>
+        </div>
+    </div>
+
+    <footer>
+        Made with ❤️ for the best mom in the world!
+    </footer>
+
+    <script>
+        let currentPage = 1;
+
+        function nextPage(pageNum) {
+            document.getElementById(`page${currentPage}`).classList.remove('active');
+            document.getElementById(`page${pageNum}`).classList.add('active');
+            currentPage = pageNum;
+            window.scrollTo(0, 0);
+        }
+
+        function prevPage(pageNum) {
+            document.getElementById(`page${currentPage}`).classList.remove('active');
+            document.getElementById(`page${pageNum}`).classList.add('active');
+            currentPage = pageNum;
+            window.scrollTo(0, 0);
+        }
+
+        function restart() {
+            document.getElementById(`page${currentPage}`).classList.remove('active');
+            document.getElementById('page1').classList.add('active');
+            currentPage = 1;
+            window.scrollTo(0, 0);
+        }
+
+        // Add smooth scrolling for mobile
+        document.querySelectorAll('.nav-btn, .back-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => {
+                    document.body.style.overflow = 'auto';
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
